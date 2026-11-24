@@ -49,9 +49,10 @@ You will need a machine with at least one CUDA-enabled GPU for inference. If you
 ```
 conda env create -f environment.yaml
 conda activate dreamer4
+pip install -e .
 ```
 
-This should install all required packages. Dataset and model checkpoints are (depending on your use case) optional and can be downloaded separately. Our data is made available [here](https://huggingface.co/datasets/nicklashansen/dreamer4) and model checkpoints are available [here](https://huggingface.co/nicklashansen/dreamer4).
+This should install all required packages, and the code as the package `dreamer4`, so the scripts below can import each other (`from dreamer4.model import ...`). Without Conda, `pip install -e ".[train,data,interactive]"` installs the package with unpinned dependencies. Dataset and model checkpoints are (depending on your use case) optional and can be downloaded separately. Our data is made available [here](https://huggingface.co/datasets/nicklashansen/dreamer4) and model checkpoints are available [here](https://huggingface.co/nicklashansen/dreamer4).
 
 ----
 

@@ -15,8 +15,8 @@ from aiohttp import web, WSMsgType
 from PIL import Image
 import io
 
-from task_set import TASK_SET
-from model import (
+from dreamer4.task_set import TASK_SET
+from dreamer4.model import (
     Encoder, Decoder, Tokenizer, Dynamics,
     temporal_patchify, temporal_unpatchify,
 )

@@ -13,9 +13,9 @@ from torch.utils.data import DataLoader, DistributedSampler
 
 import wandb
 
-from task_set import TASK_SET
-from sharded_frame_dataset import ShardedFrameDataset
-from model import (
+from dreamer4.task_set import TASK_SET
+from dreamer4.sharded_frame_dataset import ShardedFrameDataset
+from dreamer4.model import (
     Encoder, Decoder, Tokenizer,
     temporal_patchify, temporal_unpatchify,
     recon_loss_from_mae, lpips_on_mae_recon,

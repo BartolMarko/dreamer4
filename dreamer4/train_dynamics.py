@@ -15,10 +15,10 @@ from torch.utils.data import DataLoader, DistributedSampler
 
 import wandb
 
-from task_set import TASK_SET
-from sharded_frame_dataset import ShardedFrameDataset
+from dreamer4.task_set import TASK_SET
+from dreamer4.sharded_frame_dataset import ShardedFrameDataset
 
-from model import (
+from dreamer4.model import (
     Encoder, Decoder, Tokenizer,
     temporal_patchify, temporal_unpatchify,
     pack_bottleneck_to_spatial,
@@ -584,7 +584,7 @@ def train(args):
 
     # Dataset and DataLoader
     if args.use_actions:
-        from wm_dataset import WMDataset, collate_batch
+        from dreamer4.wm_dataset import WMDataset, collate_batch
         dataset = WMDataset(
             data_dir=args.data_dirs,
             frames_dir=args.frame_dirs,
